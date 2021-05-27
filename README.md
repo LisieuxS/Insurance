@@ -1,12 +1,14 @@
 # Determining relevant features considered in a quotation for a life insurance
 #### Serrano, L. Tecnológico de Monterrey. Computer System Engineering: Intelligent Systems Course.
-## Abstract
 ## Introduction
-As we are becoming mature, younger generations question the health implications and environmental impact of products that in the past were considered the normal in western life. Common products just like: plastic, dairy products, cigarettes, coke and meat. So it is not surprise that with the time we want to become more aware and responsable of our future and what we can change from it.
+As we are becoming mature, younger generations question the health implications and environmental impact of products and actions that in the past were considered the normal in western life. Common products just like: dairy products, plastic, cigarettes, coke and meat; and actions such as mineral and agricultural explotation.  So it is not surprise that with the time we want to become more aware and responsable of our future and what we can change about it.
 
-Life insurance is a service and inversion that can provide
+Life insurance is a service that gives the opportunity to the inversor of guaranteeing their loved ones with economic support. It requires of an actualization of contract per year, and it represent a new expense to consideration. But again, it is quite different the cost depending on each profile.
+
+If we are able to understand the relation between variables, and we are able to change some, the cost implications could be significantly reduce in our favour.
+ 
 ## Solution
-### Investigation
+The idea is to discover the relevance of the aspects that determine the final cost of the insurance and estimate a price for the user with the help of sklearn Lasso Regression and a Handmade Gradient Descent.
 ### Hypothesis
 There is a direct correlation of the age and the lifestyle to the determination of the price for a life insurance.
 ## Data Set
@@ -34,15 +36,13 @@ Smoker  |  If the applicant consumes tobacco in a modern basis (Yes \| No).  |
 Region  |  Division of the United States in four regions (Northeast \| Northwest \| Southeast \| Southwest).  |
 Charges  |  Quotation offered to the applicant. |
 ## Method
-### Exploration
-#### Linear Regression Framework
-For the initial test of the hypothesis
+### Regression
+#### Lasso Framework
 #### Handmade Gradiant Descent
-### Specialization
-#### Lasso Framwork
+
 ## Results
 ### Initial Hypothesis
-The first runs proved that in fact, the age was a determining factor for the charges of price. The regression show the cost-benefit risk the company is willing to take depending of the age of the applicant.
+The first runs proved that in fact, the age was a determining factor for the charges of price. The regression show the maximum cost-benefit risk the company is willing to take depending of the age of the applicant.
 
 <img src="images/age_relevance.png" alt="age_relevance.png" width="500"/>
 
@@ -80,9 +80,20 @@ By analysing the data from the data set and the information of the results, it w
 <img src="images/american.JPG" alt="american.JPG" width="800"/>
 
 ## Limitations
-Even if the discussion proves by itself that there is evidence to considered in the decision of the applicant and the plans offered by the insurance carriers, based on the data set adquired we can only assume that it is based on the data of a single company with the pressumption of three different plans offered.
+The data set did not have all the data needed to found all the relations found in the insurance's quotation, but it gave important information to the discussion.
+
+It is needed more information about de data set to determine if the conclusions from the discussion apply to them. As questions as: number of plans, name of the company, year of expedition were not found on the Internet.
 ## Conclusion
+Even if the discussion proves by itself that there is evidence to considere the decision of the applicant and the plans offered by the insurance carriers, it was found that the lifestyle makes an important distinction on the final cost, as companies will prevent more from multifactors risk.
 ## References
+Dwivedi, S. Irresponsible Agriculture & its Impact on Environment. https://krishijagran.com/blog/irresponsible-agriculture-its-impact-on-environment/
+
 Steadnick, Z. Machine Learning with R. datasets. https://github.com/stedy/Machine-Learning-with-R-datasets
 
 Tukker, A., Huppes, G., et. al. EIPRO: Analysis of the life cycle environmental impacts related to the final consumption of the EU-25. https://ec.europa.eu/environment/ipp/pdf/eipro_report.pdf
+
+Zack. Introduction to Lasso Regression. https://www.statology.org/lasso-regression/
+
+n.d. NewYorkLife. Six reasons why to buy Life Insurance. https://www.newyorklife.com/articles/six-reasons-to-buy-life-insurance#:~:text=Your%20life%20insurance%20gives%20your,%2C%20and%20much%2C%20much%20more.&text=Life%20insurance%20provides%20cash%20when%20it%27s%20needed%20most.
+
+n.d. MLTut. Stochastic Gradient Descent- A Super Easy Complete Guide! https://www.mltut.com/stochastic-gradient-descent-a-super-easy-complete-guide/
