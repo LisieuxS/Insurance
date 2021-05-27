@@ -52,7 +52,7 @@ What became surprising was that BMI by itself did not had an influence in the de
 
 It was only after plotting with multiple variable the smoking factor and the BMI of the applicant that the regression could show the relevance of them, with greater importance on the smoking consumption.
 
-<img src="images/BMI_Smoker_correlation.png" alt="BMI_Smoker_correlation.png" height="300"/> <img src="images/smoker_relevance.JPG" alt="smoker_relevance.JPG" height="300"/>
+<img src="images/BMI_Smoker_correlation.png" alt="BMI_Smoker_correlation.png" height="400"/> <img src="images/smoker_relevance.JPG" alt="smoker_relevance.JPG" height="400"/>
 
 Still smoking and the age were not the only factors affecting the data.
 
