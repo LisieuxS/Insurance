@@ -36,9 +36,62 @@ Smoker  |  If the applicant consumes tobacco in a modern basis (Yes \| No).  |
 Region  |  Division of the United States in four regions (Northeast \| Northwest \| Southeast \| Southwest).  |
 Charges  |  Quotation offered to the applicant. |
 ## Method
+# Determining relevant features considered in a quotation for a life insurance
+#### Serrano, L. Tecnológico de Monterrey. Computer System Engineering: Intelligent Systems Course.
+## Introduction
+As we are becoming mature, younger generations question the health implications and environmental impact of products and actions that in the past were considered the normal in western life. Common products just like: dairy products, plastic, cigarettes, coke and meat; and actions such as mineral and agricultural explotation.  So it is not surprise that with the time we want to become more aware and responsable of our future and what we can change about it.
+
+Life insurance is a service that gives the opportunity to the inversor of guaranteeing their loved ones with economic support. It requires of an actualization of contract per year, and it represent a new expense to consideration. But again, it is quite different the cost depending on each profile.
+
+If we are able to understand the relation between variables, and we are able to change some, the cost implications could be significantly reduce in our favour.
+ 
+## Solution
+The idea is to discover the relevance of the aspects that determine the final cost of the insurance and estimate a price for the user with the help of sklearn Lasso Regression and a Handmade Gradient Descent.
+### Hypothesis
+There is a direct correlation of the age and the lifestyle to the determination of the price for a life insurance.
+## Data Set
+### Requirements
+After analyzing the questionning, the desired amount of data needed to prove the hypothesis required to include:
+* Age of the applicant
+* Sex
+* Nocive substances consumption
+* Profession risk
+* Medical condition
+* Terminal diseases
+* BMI
+* Personal quotation
+### Definition
+Searching for free data set in webpages and opensource repositories, the one that fulfilled more the requirements was the data set provided by Steadnick.
+This included the following:
+
+Feature  |  Description  | 
+------------- | -- | 
+Age  |  Age of the applicant.  | 
+Sex  |  Sex of the applicant (Female \| Male).  |
+BMI  |  Universal measure (kg/m^2 ).  |
+Children  | Quantity of children the applicant has (not determined if children under guardianship).  |
+Smoker  |  If the applicant consumes tobacco in a modern basis (Yes \| No).  |
+Region  |  Division of the United States in four regions (Northeast \| Northwest \| Southeast \| Southwest).  |
+Charges  |  Quotation offered to the applicant. |
+## Method
 ### Regression
 #### Lasso Framework
-#### Handmade Gradiant Descent
+It is used for a linear regression when there are not to much outliers and when there is a potential correlation between features.
+
+<img src="images/lasso.JPG" alt="lasso.JPG" width="500"/>
+
+In this case, Lasso is chosen because of its control and interpretability and the importance of differentiating the important features over the least important.
+
+It is a method regularization found in the library of sklearn. It almost polarize features, or at least emphasizes the relevants as it reduces the least related.
+
+#### Handmade Gradiant 
+Stochastic Gradient is a variation of linear regression that it is used for computability low expenses.
+
+It provides the approximation with initial high variance the reduction of Mean Square Error to determine if it is reaching the result. 
+
+<img src="images/gd.JPG" alt="gd.JPG" width="500"/>
+
+Here it is implemented without framework, in order to provide a comparison between methods.
 
 ## Results
 ### Initial Hypothesis
@@ -82,7 +135,9 @@ The data set did not have all the data needed to found all the relations found i
 
 It is needed more information about de data set to determine if the conclusions from the discussion apply to them. As questions as: number of plans, name of the company, year of expedition were not found on the Internet.
 ## Conclusion
-Even if the discussion proves by itself that there is evidence to considere the decision of the applicant and the plans offered by the insurance carriers, it was found that the lifestyle makes an important distinction on the final cost, as companies will prevent more from multifactors risk.
+Even if the discussion proves by itself that there is evidence to consider the decision of the applicant and the plans offered by the insurance carriers, it was found that the lifestyle makes an important distinction on the final cost, as companies will prevent more from multifactors risk.
+
+It is possible to reduce the pricing with the avoidance of nocive substances consumption and with the constructions of good habits such as exercise and balanced meals.
 ## References
 Dwivedi, S. Irresponsible Agriculture & its Impact on Environment. https://krishijagran.com/blog/irresponsible-agriculture-its-impact-on-environment/
 
